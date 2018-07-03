@@ -16,10 +16,10 @@ function login() { //mostra detalhes dos eventos que serão importados
 }
 */
 function mudaPg(){
-    window.location("pg.html");
+    window.location.assign("pg.html");
 }
 function mudaPgE(){
-    window.location("http://www.google.com");
+    window.location.assign("http://www.google.com");
 }
 function carrega() { //mostra detalhes dos eventos que serão importados
     $.ajax({
