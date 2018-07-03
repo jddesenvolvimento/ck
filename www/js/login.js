@@ -9,15 +9,7 @@ function login() { //mostra detalhes dos eventos que serão importados
             senha: $('#senha').val()
         },
         success: function(data) {
-            if(data != ""){
-                
-                window.location = "pg.html";
-                
-            }else{
-                var erro = "Login ou Senha Incorretos!";
-                $('#retorno').html(erro);
-            }
-            
+            $('#retorno').html(data);
         }
     });
 }
