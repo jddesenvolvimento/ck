@@ -1,4 +1,4 @@
-/*
+
 var urlApp = "http://icmpe.com.br/appcheckin/";
 
 function login() { //mostra detalhes dos eventos que serão importados
@@ -10,27 +10,15 @@ function login() { //mostra detalhes dos eventos que serão importados
             senha: $('#senha').val()
         },
         success: function(data) {
-            $('#retorno').html(data);
+            
+            if(data != ""){
+                window.location.assign("pg.html");
+            }else{
+                var erro = "Login ou Senha Incorretos";
+                $('#retorno').html(erro);
+            }
+            
         }
     });
 }
-*/
-function mudaPg(){
-    window.location.assign("pg.html");
-}
-function mudaPgE(){
-    window.location.assign("http://www.google.com");
-}
-function carrega() { //mostra detalhes dos eventos que serão importados
-    $.ajax({
-        type: "GET",
-        url: "pg.html",
-        data: {
-            login: $('#login').val(),
-            senha: $('#senha').val()
-        },
-        success: function(data) {
-            $('#retorno').html(data);
-        }
-    });
-}
+
