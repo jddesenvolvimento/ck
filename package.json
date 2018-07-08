@@ -1,0 +1,1 @@
+{"name":"com.maanaimpe.checkin","version":"1.0.0","displayName":"Checkin","cordova":{"platforms":["android"]},"dependencies":{"cordova-android":"~7.0.0"}}

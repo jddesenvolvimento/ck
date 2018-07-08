@@ -110,4 +110,5 @@
     <allow-intent href="*" />
     <access origin="*" />
     <plugin name="cordova-sqlite-storage" spec="~2.3.3" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

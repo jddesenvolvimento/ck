@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url("img/sidebar-2.jpg");
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #08088A;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>    
+    <title>Check In</title>
+</head>
+
+<body>
+    <div id="deviceready" class="container blink">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="home.html">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Sair</a>
+         </div>
+        
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="text-info" >&#9776;</span></span>
+        <span id="login" style="float: right; margin-top: 10px;" class="text-info"></span>
+        <div class="row">
+            
+        </div>
+        <div class="row text-center">
+            <h1>Checkin</h1>
+        </div>
+        <div class="row">
+            <div class="com-sm-4"></div>
+            <div class="col-sm-4 text-center">
+                <input type="text" id="codigo" class="form-control">
+                <button class="btn btn-primary" style="margin-top: 15px;" >Checkar</button>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/db.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript">
+        //seleciona o usuario selecionado e mostra na tela
+        db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM user', [], function (tx, results) {
+            var bemvindo = "<h4>Olá "+ results.rows.item(0).login+"</h4>";
+            
+            $('#login').html(bemvindo);
+            
+          });
+          });
+          
+          
+    </script>
+</body>
+
+</html>
