@@ -16,6 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var urlApp = "http://icmpe.com.br/appcheckin/"; //caminho da API JSON
+
+var db; //variavel global para usar banco de dados sqlite
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -46,4 +50,6 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+    
+  
 };

@@ -1,6 +1,4 @@
 
-var urlApp = "http://icmpe.com.br/appcheckin/";
-
 function login() { //mostra detalhes dos eventos que serão importados
     $.ajax({
         type: "GET",
@@ -11,13 +9,18 @@ function login() { //mostra detalhes dos eventos que serão importados
         },
         success: function(data) {
             
-            if(data != ""){
-                window.location.assign("pg.html");
-            }else{
-                var erro = "Login ou Senha Incorretos";
+            if(data == false || data == '\r\nfalse'){
+                var erro = "Credenciais Incorretas!";
                 $('#retorno').html(erro);
+            }else{
+                var json = JSON.parse(data); //converte json para array
+                
+                //faz inclusão do usuario no banco local
+                saveUser(json["id"],json["login"],json["senha"],json["nivel"]);
+                
+                //abre pg home
+                window.location.assign("home.html");
             }
-            
         }
     });
 }

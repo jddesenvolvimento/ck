@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
-  "version": "com.phonegap.helloworld",
-  "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "name": "Checkin",
+  "short_name": "Checkin",
+  "version": "com.maanaimpe.checkin",
+  "description": "Sistema de controle de acesso aos eventos do Maanaim",
+  "author": "Jadson Dias",
   "icons": [],
   "start_url": "index.html"
 }

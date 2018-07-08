@@ -109,4 +109,5 @@
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <access origin="*" />
+    <plugin name="cordova-sqlite-storage" spec="~2.3.3" />
 </widget>
