@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Jul 09 16:52:00 ART 2018
+#Tue Jul 10 10:21:00 ART 2018
 2.path=www/plugins/cordova-plugin-media-capture/www/CaptureAudioOptions.js
 14.set=ASSET
 107.baseType=DIRECTORY

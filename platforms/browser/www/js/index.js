@@ -1,7 +1,7 @@
 
 var urlApp = "http://icmpe.com.br/appcheckin/"; //caminho da API JSON
 
-var db; //variavel global para usar banco de dados sqlite
+var db = null; //variavel global para usar banco de dados sqlite
 
 var app = {
     // Application Constructor
@@ -21,7 +21,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        createDB();
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -34,10 +33,8 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-    
   
 };
-
 
 //funcçoes do menu side
 function openNav() {

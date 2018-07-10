@@ -1,6 +1,7 @@
 function createDB(){
     try{
-        db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
+        //db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
+        //document.addEventListener('deviceready', function() {
         //db = window.sqlitePlugin.openDatabase({name: 'checkinDB.db', location: 'default'}, function(db) {
             db.transaction(function(tx) {
                 tx.executeSql('CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY ASC, login VARCHAR(30), senha VARCHAR(50), nivel INT(1))');  
@@ -9,7 +10,8 @@ function createDB(){
               console.log('Open database ERROR: ' + JSON.stringify(err));
               alert("DB nao conectado");
             });
-          //});
+        //  });
+      //  });  
     }catch (erro){
         alert('Erro n conetado: ' + erro);
     }  
