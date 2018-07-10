@@ -110,4 +110,5 @@
     <allow-intent href="*" />
     <access origin="*" />
     <engine name="android" spec="~7.0.0" />
+    <plugin name="cordova-sqlite-evcore-extbuild-free" spec="^0.9.7" />
 </widget>

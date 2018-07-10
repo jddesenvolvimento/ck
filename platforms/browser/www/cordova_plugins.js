@@ -404,6 +404,14 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/cordova-sqlite-evcore-extbuild-free/www/SQLitePlugin.js",
+        "id": "cordova-sqlite-evcore-extbuild-free.SQLitePlugin",
+        "pluginId": "cordova-sqlite-evcore-extbuild-free",
+        "clobbers": [
+            "SQLitePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -421,7 +429,8 @@ module.exports.metadata =
     "cordova-plugin-inappbrowser": "1.7.2",
     "cordova-plugin-network-information": "1.3.4",
     "cordova-plugin-vibration": "2.1.6",
-    "cordova-plugin-whitelist": "1.3.3"
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-sqlite-evcore-extbuild-free": "0.9.7"
 }
 // BOTTOM OF METADATA
 });
