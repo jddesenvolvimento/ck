@@ -371,11 +371,11 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-sqlite-evcore-extbuild-free.SQLitePlugin",
-    "file": "plugins/cordova-sqlite-evcore-extbuild-free/www/SQLitePlugin.js",
-    "pluginId": "cordova-sqlite-evcore-extbuild-free",
+    "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
+    "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
+    "pluginId": "phonegap-plugin-barcodescanner",
     "clobbers": [
-      "SQLitePlugin"
+      "cordova.plugins.barcodeScanner"
     ]
   }
 ];
@@ -394,7 +394,7 @@ module.exports.metadata =
   "cordova-plugin-network-information": "1.3.4",
   "cordova-plugin-vibration": "2.1.6",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-sqlite-evcore-extbuild-free": "0.9.7"
+  "phonegap-plugin-barcodescanner": "8.0.0"
 };
 // BOTTOM OF METADATA
 });

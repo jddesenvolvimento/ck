@@ -1,3 +1,8 @@
+function fecharApp(){
+    confirm("Deseja Sair?");
+    console.log("Fechando APP");
+    navigator.app.exitApp();
+}
 
 function login() { //mostra detalhes dos eventos que serão importados
     try{
@@ -31,4 +36,17 @@ function login() { //mostra detalhes dos eventos que serão importados
         alert("Verifique sua conexão com a internet");
     }
 }
+
+function scan(){
+        console.log("clicked");
+        cordova.plugins.barcodeScanner.scan(function(result){
+        //success callback
+        alert(JSON.stringify(result));
+
+        },function(error){
+        //error callback
+        alert(JSON.stringify(error));
+
+        });
+        }
 

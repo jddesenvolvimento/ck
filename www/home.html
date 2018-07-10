@@ -81,7 +81,7 @@ body {
             <div class="com-sm-4"></div>
             <div class="col-sm-4 text-center">
                 <input type="text" id="codigo" class="form-control">
-                <button class="btn btn-primary" style="margin-top: 15px;" >Checkar</button>
+                <button class="btn btn-primary" style="margin-top: 15px;" onclick="scan()" >Checkar</button>
             </div>
         </div>
     </div>
@@ -89,6 +89,7 @@ body {
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
     <script type="text/javascript" src="js/funcao.js"></script>
@@ -101,10 +102,7 @@ body {
             $('#login').html(bemvindo);
             
           });
-          });
-        
-          
-          
+          });          
     </script>
 </body>
 
