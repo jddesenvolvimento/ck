@@ -1,3 +1,5 @@
+var db = null;
+
 function createDB(){
     try{
         //db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
@@ -20,6 +22,8 @@ function createDB(){
 
 function testaUser(){
     //rerifica se ja possui usuario cadastrado, se sim loga atumaticamente
+    document.addEventListener('deviceready', function() {
+    db = window.sqlitePlugin.openDatabase({name: 'checkinDB.db', location: 'default'}, function(db) {
     db.transaction(function(tx) {
         tx.executeSql('SELECT * FROM user', [], function (tx, results) {
 
@@ -29,9 +33,12 @@ function testaUser(){
         },function (tx, error){
             if (error){
                 console.log(error);
+                alert("nao pesquisou");
             }
         });
-    });    
+    });  
+    });
+    });
 }
 
 function saveUser(id,login,senha,nivel){
@@ -42,9 +49,11 @@ function saveUser(id,login,senha,nivel){
     
     try{
         //db = openDatabase('dbck', '1.0', 'db checkin', 2 * 1024 * 1024);
+        db = window.sqlitePlugin.openDatabase({name: 'checkinDB.db', location: 'default'}, function(db) {
         db.transaction(function (tx){
             tx.executeSql('INSERT INTO user (id, login, senha, nivel) VALUES (?,?,?,?)',[id,login,senha,nivel]);
-        })
+        });
+        });
     }catch(erro){
        alert('Nao Salvou Erro: ' + erro); 
     }

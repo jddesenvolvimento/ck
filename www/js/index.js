@@ -1,8 +1,6 @@
 
 var urlApp = "http://icmpe.com.br/appcheckin/"; //caminho da API JSON
 
-var db = null; //variavel global para usar banco de dados sqlite
-
 var app = {
     // Application Constructor
     initialize: function() {
