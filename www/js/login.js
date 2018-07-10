@@ -21,7 +21,10 @@ function login() { //mostra detalhes dos eventos que serão importados
                 //abre pg home
                 window.location.assign("home.html");
             }
-        }
+        },
+        error: function() {
+            alert("Verifique sua conexão com a internet");
+	}
     });
 }
 
