@@ -66,7 +66,7 @@ body {
             <a href="home.html">Home</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
-            <a href="#">Sair</a>
+            <a href="#" onclick="fecharApp();">Sair</a>
          </div>
         
         <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="text-info" >&#9776;</span></span>
@@ -91,12 +91,9 @@ body {
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/funcao.js"></script>
     <script type="text/javascript">
         //seleciona o usuario selecionado e mostra na tela
-        //db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
-        document.addEventListener('deviceready', function() {
-        db = window.sqlitePlugin.openDatabase({name: 'checkinDB.db', location: 'default'}, function(db){
             db.transaction(function (tx) {
             tx.executeSql('SELECT * FROM user', [], function (tx, results) {
             var bemvindo = "<h4>Olá "+ results.rows.item(0).login+"</h4>";
@@ -105,8 +102,6 @@ body {
             
           });
           });
-        });
-        });
         
           
           

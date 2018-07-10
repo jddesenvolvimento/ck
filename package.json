@@ -6,12 +6,9 @@
     "platforms": [
       "android"
     ],
-    "plugins": {
-      "cordova-sqlite-evcore-extbuild-free": {}
-    }
+    "plugins": {}
   },
   "dependencies": {
-    "cordova-android": "~7.0.0",
-    "cordova-sqlite-evcore-extbuild-free": "^0.9.7"
+    "cordova-android": "~7.0.0"
   }
 }
