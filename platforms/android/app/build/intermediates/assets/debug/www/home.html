@@ -64,9 +64,9 @@ body {
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="home.html">Home</a>
-            <a href="#">Services</a>
+            <a href="download.html">Carregar Dados</a>
             <a href="#">Clients</a>
-            <a href="#">Sair</a>
+            <a href="#" onclick="fecharApp();">Sair</a>
          </div>
         
         <span style="font-size:30px;cursor:pointer" onclick="openNav()"><span class="text-info" >&#9776;</span></span>
@@ -81,7 +81,7 @@ body {
             <div class="com-sm-4"></div>
             <div class="col-sm-4 text-center">
                 <input type="text" id="codigo" class="form-control">
-                <button class="btn btn-primary" style="margin-top: 15px;" >Checkar</button>
+                <button class="btn btn-primary" style="margin-top: 15px;" onclick="scan()" >Checkar</button>
             </div>
         </div>
     </div>
@@ -89,25 +89,20 @@ body {
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/db.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/funcao.js"></script>
     <script type="text/javascript">
         //seleciona o usuario selecionado e mostra na tela
-        db = openDatabase('mydb', '1.0', 'my first database', 2 * 1024 * 1024);
-        //db = window.sqlitePlugin.openDatabase({name: 'checkinDB.db', location: 'default'}, function(db){
             db.transaction(function (tx) {
-            tx.executeSql('SELECT * FROM user', [], function (tx, results) {
-            var bemvindo = "<h4>Olá "+ results.rows.item(0).login+"</h4>";
+                tx.executeSql('SELECT * FROM user', [], function (tx, results) {
+                    var bemvindo = "<h4>Olá "+ results.rows.item(0).login+"</h4>";
             
-            $('#login').html(bemvindo);
+                    $('#login').html(bemvindo);
             
-          });
-          });
-        //});
-        
-          
-          
+                });
+            });          
     </script>
 </body>
 

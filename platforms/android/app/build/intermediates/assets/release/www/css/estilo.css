@@ -1,0 +1,17 @@
+.login{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.login-img{
+  width: 200px;
+   height: 200px;
+   background-color: #000;
+   color: #FFF;
+   margin-bottom: 50px;
+   /* Agora a mágica */
+   border-radius: 50%;   
+}
+.login-input{
+    height: 50px;
+}
